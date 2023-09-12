@@ -1,0 +1,14 @@
+{
+  "products": [],
+  "categories": [
+    {
+      "name": "test23",
+      "id": 6
+    },
+    {
+      "name": "Mobile devices",
+      "id": 7
+    }
+  ],
+  "users": []
+}
