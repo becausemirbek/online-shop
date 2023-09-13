@@ -12,7 +12,8 @@ const CreateCategory = () => {
     categories,
     category,
     getCategoryById,
-    handleEditCategory
+    handleEditCategory,
+    deleteCategory
   } = useContext(productsContext);
 
   const [show, setShow] = useState(false);
@@ -25,6 +26,16 @@ const CreateCategory = () => {
   const handleEdit = (id) => {
     setEditCategory(id);
     setShow(true)
+  }
+
+  const handleDelete = async (id) => {
+    await deleteCategory(id);
+    await getCategories();
+  }
+
+  const handleCreate = async () => {
+    await createCategory({ name: categoryName })
+    await getCategories();
   }
 
   const handleSubmit = async () => {
@@ -49,7 +60,6 @@ const CreateCategory = () => {
     getCategories();
   }, [])
 
-  console.log(categories, 'categories')
   return (
     <>
       <div className='categories'>
@@ -59,14 +69,14 @@ const CreateCategory = () => {
             placeholder='Category name'
             onChange={(e) => setCategoryName(e.target.value)}
           />
-          <button onClick={() => createCategory({ name: categoryName })}>Create</button>
+          <button onClick={handleCreate}>Create</button>
         </div>
         <div>
           <h3>All categories</h3>
           {categories ? categories.map(({ name, id }) => (
             <div key={id}>
               {name}
-              <Button variant='danger'>Delete</Button>
+              <Button variant='danger' onClick={() => handleDelete(id)}>Delete</Button>
               <Button variant='warning' onClick={() => handleEdit(id)}>Edit</Button>
             </div>
           )) : 'Empty' }

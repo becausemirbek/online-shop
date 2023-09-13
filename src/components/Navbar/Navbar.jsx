@@ -34,8 +34,8 @@ function NavScrollExample() {
             <Nav.Link>Home</Nav.Link>
             {/* for product */}
             <NavDropdown title="Product" id="navbarScrollingDropdown">
-              <NavDropdown.Item>Product List</NavDropdown.Item>
-              <NavDropdown.Item>Add Product</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate('/products')}>Product List</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate('/create-product')}>Add Product</NavDropdown.Item>
             </NavDropdown>
             {/* for user */}
             <NavDropdown title="Account" id="navbarScrollingDropdown">

@@ -6,8 +6,9 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import RegisterSuccess from './components/RegisterSuccess/RegisterSuccess';
 // product
-import ProductList from './components/products/ProductList/ProductList';
 import CreateCategory from './pages/CreateCategory';
+import CreateProduct from './pages/CreateProduct';
+import Products from './pages/Products';
 
 const PrivateRoutes = () => {
   const user = localStorage.getItem('email')
@@ -24,8 +25,9 @@ const Routing = () => {
         {/* products routes */}
         <Route element={<PrivateRoutes />}>
           <Route path="*" element={<Loader />} />
-          <Route path="/products" element={<ProductList />} />
           <Route path="/create-category" element={<CreateCategory />} />
+          <Route path='/create-product' element={<CreateProduct />} />
+          <Route path='/products' element={<Products />} />
         </Route>
     </Routes>
   )

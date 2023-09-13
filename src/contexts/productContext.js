@@ -24,6 +24,11 @@ function reducer(state = INIT_STATE, action) {
         ...state,
         category: action.payload
       }
+      case 'GET_PRODUCTS':
+        return {
+          ...state,
+          products: action.payload
+        }
     default:
       return state;
   }
@@ -35,7 +40,6 @@ const ProductsContextProvider = ({ children }) => {
   const createCategory = async (category) => {
     try {
       await axios.post(`${API}/categories`, category)
-      alert('category created');
     } catch (error) {
       console.log(error);
     }
@@ -69,6 +73,34 @@ const ProductsContextProvider = ({ children }) => {
     await axios.patch(`${API}/categories/${id}`, data)
   }
 
+  const deleteCategory = async (id) => {
+    try {
+      await axios.delete(`${API}/categories/${id}`)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const createProduct = async (product) => {
+    try {
+      await axios.post(`${API}/products`, product);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const getProducts = async () => {
+    try {
+      const { data } = await axios(`${API}/products`)
+      dispatch({
+        type: "GET_PRODUCTS",
+        payload: data
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <productsContext.Provider
       value={{
@@ -80,7 +112,10 @@ const ProductsContextProvider = ({ children }) => {
         createCategory,
         getCategories,
         getCategoryById,
-        handleEditCategory
+        handleEditCategory,
+        deleteCategory,
+        createProduct,
+        getProducts
       }}
     >
       {children}

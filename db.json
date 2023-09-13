@@ -1,13 +1,60 @@
 {
-  "products": [],
-  "categories": [
+  "products": [
     {
-      "name": "test23",
-      "id": 6
+      "name": "Iphone 14 PRO",
+      "description": "fajsdfhaksjdhflakjsdhflasjkdhflajks",
+      "price": "1000",
+      "category": "qwerty",
+      "id": 1
     },
     {
-      "name": "Mobile devices",
-      "id": 7
+      "name": "Macbook Pro 2020",
+      "description": "wredtfyguiokpfasdfas",
+      "price": "1450",
+      "category": "ertyuidfasd",
+      "id": 2
+    },
+    {
+      "name": "ewrtyuio",
+      "description": "etryuio",
+      "price": "576",
+      "category": "qwerty",
+      "id": 3
+    },
+    {
+      "name": "qwertyu",
+      "description": "wertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkj",
+      "price": "876",
+      "category": "ertyuidfasd",
+      "id": 4
+    },
+    {
+      "name": "qwertyuio",
+      "description": "dfasdfasdfasd",
+      "price": "1877",
+      "category": "",
+      "id": 5
+    },
+    {
+      "name": "retyuio",
+      "description": "tryuiop",
+      "price": "690",
+      "category": "ertyuidfasd",
+      "id": 6
+    }
+  ],
+  "categories": [
+    {
+      "name": "ertyui",
+      "id": 1
+    },
+    {
+      "name": "ertyuidfasd",
+      "id": 2
+    },
+    {
+      "name": "qwerty",
+      "id": 3
     }
   ],
   "users": []
