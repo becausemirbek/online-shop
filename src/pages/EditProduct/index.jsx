@@ -1,25 +1,40 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { productsContext } from '../../contexts/productContext';
 import './style.css';
 import { Button, Form } from 'react-bootstrap';
-import { productsContext } from '../../contexts/productContext';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const CreateProduct = () => {
-  const {
-    getCategories,
-    categories,
-    createProduct 
-  } = useContext(productsContext);
+const EditProduct = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
+  const navigate = useNavigate();
+  const { 
+    getCategories,
+    categories,
+    getProductById,
+    oneProduct,
+    editProduct,
+  } = useContext(productsContext)
+  const { id } = useParams()
 
   useEffect(() => {
     getCategories();
+    getProductById(id);
   },[])
 
-  const handleSubmit = () => {
+  useEffect(() => {
+    if(oneProduct) {
+      setName(oneProduct.name);
+      setDescription(oneProduct.description)
+      setPrice(oneProduct.price)
+      setSelectedCategory(oneProduct.category)
+    }
+  }, [oneProduct])
+
+  const handleSubmit = async () => {
     const product = {
       name,
       description,
@@ -28,17 +43,18 @@ const CreateProduct = () => {
       category: selectedCategory
     }
 
-    createProduct(product);
+    await editProduct(product, id);
+    navigate('/user-products');
+
     setName('');
     setDescription('');
     setPrice('');
-    setImage('');
     setSelectedCategory('');
   }
 
   return (
     <div className='form-wrapper'>
-      <h3>Create Product</h3>
+      <h3>Edit Product</h3>
       <Form>
         <Form.Control 
           type='text'
@@ -66,6 +82,7 @@ const CreateProduct = () => {
         />
         <Form.Select
           onChange={(e) => setSelectedCategory(e.target.value)}
+          value={selectedCategory}
         >
           <option>Choose category</option>
           {categories && categories.map(item => (
@@ -78,4 +95,4 @@ const CreateProduct = () => {
   );
 };
 
-export default CreateProduct;
+export default EditProduct;

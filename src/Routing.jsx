@@ -9,11 +9,17 @@ import RegisterSuccess from './components/RegisterSuccess/RegisterSuccess';
 import CreateCategory from './pages/CreateCategory';
 import CreateProduct from './pages/CreateProduct';
 import Products from './pages/Products';
+import UserProducts from './pages/UserProducts';
+import EditProduct from './pages/EditProduct';
 
 const PrivateRoutes = () => {
   const user = localStorage.getItem('email')
 
-  return user ? <Outlet /> : <Navigate to='/login' />
+  return user ? (
+    <div style={{ width: '90%', margin: '0 auto' }}>
+      <Outlet />
+    </div>
+  ) : <Navigate to='/login' />
 }
 
 const Routing = () => {
@@ -28,6 +34,8 @@ const Routing = () => {
           <Route path="/create-category" element={<CreateCategory />} />
           <Route path='/create-product' element={<CreateProduct />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/user-products' element={<UserProducts />} />
+          <Route path='/edit-product/:id' element={<EditProduct />} />
         </Route>
     </Routes>
   )

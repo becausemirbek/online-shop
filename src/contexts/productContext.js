@@ -29,6 +29,11 @@ function reducer(state = INIT_STATE, action) {
           ...state,
           products: action.payload
         }
+      case 'GET_PRODUCT':
+        return {
+          ...state,
+          oneProduct: action.payload
+        }
     default:
       return state;
   }
@@ -101,6 +106,22 @@ const ProductsContextProvider = ({ children }) => {
     }
   }
 
+  const getProductById = async (id) => {
+    try {
+      const { data } = await axios(`${API}/products/${id}`)
+      dispatch({
+        type: "GET_PRODUCT",
+        payload: data
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const editProduct = async (product, id) => {
+    await axios.patch(`${API}/products/${id}`, product)
+  }
+
   return (
     <productsContext.Provider
       value={{
@@ -115,7 +136,9 @@ const ProductsContextProvider = ({ children }) => {
         handleEditCategory,
         deleteCategory,
         createProduct,
-        getProducts
+        getProducts,
+        getProductById,
+        editProduct
       }}
     >
       {children}

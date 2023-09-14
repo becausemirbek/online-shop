@@ -12,6 +12,7 @@ import { authContext } from '../../contexts/authContext';
 
 function NavScrollExample() {
   const [currentUser, setCurrentUser] = useState('');
+  const isAdmin = currentUser === 'mirbek@gmail.com';
   const navigate = useNavigate();
   const { handleLogout } = useContext(authContext);
   
@@ -49,6 +50,7 @@ function NavScrollExample() {
                   null
                 )
               }
+              {isAdmin && <NavDropdown.Item onClick={() => navigate('/user-products')}>My products</NavDropdown.Item>}
               <NavDropdown.Item onClick={() => handleLogout(navigate)}>Logout</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href='#' disabled>

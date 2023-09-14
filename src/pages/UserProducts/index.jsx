@@ -1,26 +1,25 @@
 import React, { useContext, useEffect } from 'react';
 import { productsContext } from '../../contexts/productContext';
-import { Button, Card } from 'react-bootstrap';
-import './style.css';
 import CustomCard from '../../components/Card';
+import './style.css'
 
-const Products = () => {
-  const { products, getProducts } = useContext(productsContext);
+const UserProducts = () => {
+  const { products, getProducts } = useContext(productsContext)
 
   useEffect(() => {
-    getProducts();
+    getProducts()
   }, [])
 
   return (
     <div className='products'>
-      <h3>Products</h3>
+      <h3>My Products</h3>
       <div className='product-list'>
         {products ? products.map(item => (
-          <CustomCard product={item} />
+          <CustomCard product={item} isUserProducts />
         )) : 'Empty'}
       </div>
     </div>
   );
 };
 
-export default Products;
+export default UserProducts;
