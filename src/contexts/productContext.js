@@ -94,9 +94,11 @@ const ProductsContextProvider = ({ children }) => {
     }
   }
 
-  const getProducts = async () => {
+  const getProducts = async (search) => {
     try {
-      const { data } = await axios(`${API}/products`)
+      const { data } = await axios(`${API}/products`, {
+        params: { q: search }
+      })
       dispatch({
         type: "GET_PRODUCTS",
         payload: data
@@ -122,6 +124,14 @@ const ProductsContextProvider = ({ children }) => {
     await axios.patch(`${API}/products/${id}`, product)
   }
 
+  const deleteProduct = async (id) => {
+    try {
+      await axios.delete(`${API}/products/${id}`);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <productsContext.Provider
       value={{
@@ -138,7 +148,8 @@ const ProductsContextProvider = ({ children }) => {
         createProduct,
         getProducts,
         getProductById,
-        editProduct
+        editProduct,
+        deleteProduct
       }}
     >
       {children}

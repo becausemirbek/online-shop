@@ -28,9 +28,10 @@ const EditProduct = () => {
   useEffect(() => {
     if(oneProduct) {
       setName(oneProduct.name);
-      setDescription(oneProduct.description)
-      setPrice(oneProduct.price)
-      setSelectedCategory(oneProduct.category)
+      setDescription(oneProduct.description);
+      setImage(oneProduct.image);
+      setPrice(oneProduct.price);
+      setSelectedCategory(oneProduct.category);
     }
   }, [oneProduct])
 

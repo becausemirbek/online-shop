@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-const CustomCard = ({ product, isUserProducts }) => {
+const CustomCard = ({ product, isUserProducts, onDelete }) => {
   const navigate = useNavigate();
 
   return (
@@ -20,7 +20,7 @@ const CustomCard = ({ product, isUserProducts }) => {
           <Button variant="primary">Details</Button>
           {isUserProducts && (
             <>
-              <Button variant="danger">Delete</Button>
+              <Button variant="danger" onClick={() => onDelete(product.id)}>Delete</Button>
               <Button variant="info"
                 onClick={() => navigate(`/edit-product/${product.id}`)}
               >

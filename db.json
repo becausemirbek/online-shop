@@ -1,61 +1,85 @@
 {
   "products": [
     {
-      "name": "Iphone 14 PRO",
-      "description": "fajsdfhaksjdhflakjsdhflasjkdhflajks",
-      "price": "1000",
-      "category": "qwerty",
+      "name": "Airpods PRO 2",
+      "description": "xcvbnm ",
+      "price": "3456",
+      "category": "MobileDevices",
       "id": 1,
-      "image": "https://softech.kg/image/cache/704ec7339290b014fa034daaf9486e5f.jpg"
+      "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/airpodspro2gn/mqd83-670x540.webp"
     },
     {
-      "name": "Macbook Pro 2021",
-      "description": "wredtfyguiokpfasdfas",
-      "price": "1450",
-      "category": "ertyuidfasd",
+      "name": "Apple watch series 8",
+      "description": "asdfghjkl;",
+      "price": "1000",
+      "category": "MobileDevices",
       "id": 2,
-      "image": "https://softech.kg/image/cache/704ec7339290b014fa034daaf9486e5f.jpg"
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/applewatchultra/starlightalpineloop/mqe53ref_vw_34fr%2Bwatch-49-titanium-ultra_vw_34fr_wf_co%2Bwatch-face-49-alpine-ultra_vw_34fr_wf_co-670x540.webp"
     },
     {
-      "name": "ewrtyuio",
-      "description": "etryuio",
-      "price": "576",
-      "category": "qwerty",
+      "name": "Iphone 13 plus",
+      "description": "qwerty",
+      "price": "12345",
+      "category": "MobileDevices",
       "id": 3,
-      "image": "https://softech.kg/image/cache/704ec7339290b014fa034daaf9486e5f.jpg"
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14/productred/wwen_iphone14_q422_productred_pdp_image_position-6-670x540.webp"
     },
     {
-      "name": "qwertyu",
-      "description": "wertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkjwertyuihlujhlkjhlkjhlkj",
-      "price": "876",
-      "category": "ertyuidfasd",
+      "name": "IPad",
+      "description": "qwerty",
+      "price": "144 990 сом ",
+      "category": "Phones",
       "id": 4,
-      "image": "https://softech.kg/image/cache/704ec7339290b014fa034daaf9486e5f.jpg"
+      "image": "https://asiastore.kg/image/cachewebp/catalog/ipad/ipadpro11m2/ipad-pro-13-select-wifi-silver-202210-670x540.webp"
     },
     {
-      "name": "qwertyuio",
-      "description": "dfasdfasdfasd",
-      "price": "1877",
-      "category": "",
-      "id": 5,
-      "image": "https://softech.kg/image/cache/704ec7339290b014fa034daaf9486e5f.jpg"
+      "name": "Mac Book air",
+      "description": "15.3 M2",
+      "price": "127 990 сом",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookairm2/spacegray15/mba15-spacegray-gallery1-202306-670x540.webp",
+      "category": "MobileDevices",
+      "id": 5
     },
     {
-      "name": "retyuio",
-      "description": "tryuiop",
-      "price": "690",
-      "category": "ertyuidfasd",
-      "id": 6,
-      "image": "https://softech.kg/image/cache/704ec7339290b014fa034daaf9486e5f.jpg"
+      "name": "Умная колонка JBL Link Music Yandex",
+      "description": "Доставка в течение 24 часов с момента оформления",
+      "price": "10 990 сом",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/yandex/jbllink/12094-670x540.webp",
+      "category": "MobileDevices",
+      "id": 6
+    },
+    {
+      "name": "Беспроводная акустика JBL Boombox 3 с поддержкой WI-FI",
+      "description": "JBLBB3WIFIBLKUK",
+      "price": "52 990 сом",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/jbl/boombox3/wifi/jbl_boombox3_wifi_front_37932_x3-670x540.webp",
+      "category": "MobileDevices",
+      "id": 7
+    },
+    {
+      "name": "iPhone 14 Plus, 512 ГБ, Фиолетовый",
+      "description": "MQ5Y3RU/A",
+      "price": "115 990 сом",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14plus/purple/wwen_iphone14plus_q422_purple_pdp_image_position-1a-670x540.webp",
+      "category": "Phones",
+      "id": 8
+    },
+    {
+      "name": "iPhone 14 Pro, 128 ГБ, Tемно-фиолетовый",
+      "description": "MQ0H3RU/A",
+      "price": "98 990 сом",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14pro/deeppurple/wwen_iphone14pro_q422_deep-purple_pdp-images_position-1a-670x540.webp",
+      "category": "Phones",
+      "id": 9
     }
   ],
   "categories": [
     {
-      "name": "ertyui",
+      "name": "MobileDevices",
       "id": 1
     },
     {
-      "name": "ertyuidfasd",
+      "name": "Phones",
       "id": 2
     }
   ],

@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -8,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from '../../contexts/authContext';
+import SearchComponent from '../SearchComponent';
 
 
 function NavScrollExample() {
@@ -23,7 +23,7 @@ function NavScrollExample() {
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
-      <Container fluid>
+      <Container style={{ width: '80%', margin: '0 auto' }}>
         <Navbar.Brand href="#">React&Backend</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -60,15 +60,7 @@ function NavScrollExample() {
               <Link to="/create-category">Create category</Link>
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          <SearchComponent />
         </Navbar.Collapse>
       </Container>
     </Navbar>

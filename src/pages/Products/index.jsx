@@ -3,13 +3,15 @@ import { productsContext } from '../../contexts/productContext';
 import { Button, Card } from 'react-bootstrap';
 import './style.css';
 import CustomCard from '../../components/Card';
+import { useSearchParams } from 'react-router-dom';
 
 const Products = () => {
   const { products, getProducts } = useContext(productsContext);
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    getProducts();
-  }, [])
+    getProducts(searchParams.get('search'));
+  }, [searchParams])
 
   return (
     <div className='products'>
