@@ -4,7 +4,7 @@
       "name": "Airpods PRO 2",
       "description": "xcvbnm ",
       "price": "3456",
-      "category": "MobileDevices",
+      "category": "Mobile Devices",
       "id": 1,
       "image": "https://asiastore.kg/image/cachewebp/catalog/airpods/airpodspro2gn/mqd83-670x540.webp"
     },
@@ -12,22 +12,22 @@
       "name": "Apple watch series 8",
       "description": "asdfghjkl;",
       "price": "1000",
-      "category": "MobileDevices",
+      "category": "Mobile Devices",
       "id": 2,
       "image": "https://asiastore.kg/image/cachewebp/catalog/iwatch/applewatchultra/starlightalpineloop/mqe53ref_vw_34fr%2Bwatch-49-titanium-ultra_vw_34fr_wf_co%2Bwatch-face-49-alpine-ultra_vw_34fr_wf_co-670x540.webp"
     },
     {
       "name": "Iphone 13 plus",
       "description": "qwerty",
-      "price": "12345",
-      "category": "MobileDevices",
+      "price": "1050",
+      "category": "Mobile Devices",
       "id": 3,
       "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14/productred/wwen_iphone14_q422_productred_pdp_image_position-6-670x540.webp"
     },
     {
       "name": "IPad",
       "description": "qwerty",
-      "price": "144 990 сом ",
+      "price": "1899 ",
       "category": "Phones",
       "id": 4,
       "image": "https://asiastore.kg/image/cachewebp/catalog/ipad/ipadpro11m2/ipad-pro-13-select-wifi-silver-202210-670x540.webp"
@@ -35,31 +35,31 @@
     {
       "name": "Mac Book air",
       "description": "15.3 M2",
-      "price": "127 990 сом",
+      "price": "1500",
       "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookairm2/spacegray15/mba15-spacegray-gallery1-202306-670x540.webp",
-      "category": "MobileDevices",
+      "category": "Mobile Devices",
       "id": 5
     },
     {
       "name": "Умная колонка JBL Link Music Yandex",
       "description": "Доставка в течение 24 часов с момента оформления",
-      "price": "10 990 сом",
+      "price": "150",
       "image": "https://asiastore.kg/image/cachewebp/catalog/yandex/jbllink/12094-670x540.webp",
-      "category": "MobileDevices",
+      "category": "Mobile Devices",
       "id": 6
     },
     {
       "name": "Беспроводная акустика JBL Boombox 3 с поддержкой WI-FI",
       "description": "JBLBB3WIFIBLKUK",
-      "price": "52 990 сом",
+      "price": "599",
       "image": "https://asiastore.kg/image/cachewebp/catalog/jbl/boombox3/wifi/jbl_boombox3_wifi_front_37932_x3-670x540.webp",
-      "category": "MobileDevices",
+      "category": "Mobile Devices",
       "id": 7
     },
     {
       "name": "iPhone 14 Plus, 512 ГБ, Фиолетовый",
       "description": "MQ5Y3RU/A",
-      "price": "115 990 сом",
+      "price": "2500",
       "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14plus/purple/wwen_iphone14plus_q422_purple_pdp_image_position-1a-670x540.webp",
       "category": "Phones",
       "id": 8
@@ -67,15 +67,23 @@
     {
       "name": "iPhone 14 Pro, 128 ГБ, Tемно-фиолетовый",
       "description": "MQ0H3RU/A",
-      "price": "98 990 сом",
+      "price": "999",
       "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14pro/deeppurple/wwen_iphone14pro_q422_deep-purple_pdp-images_position-1a-670x540.webp",
       "category": "Phones",
       "id": 9
+    },
+    {
+      "name": "qwert",
+      "description": "wertyui",
+      "price": "503",
+      "image": "https://asiastore.kg/image/cachewebp/catalog/iphone/iphone14/iphone14plus/purple/wwen_iphone14plus_q422_purple_pdp_image_position-1a-670x540.webp",
+      "category": "Mobile Devices",
+      "id": 10
     }
   ],
   "categories": [
     {
-      "name": "MobileDevices",
+      "name": "Mobile Devices",
       "id": 1
     },
     {

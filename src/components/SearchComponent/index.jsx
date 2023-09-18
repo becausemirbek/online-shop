@@ -5,17 +5,24 @@ import { productsContext } from '../../contexts/productContext';
 
 const SearchComponent = () => {
   const [search, setSearch] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
 
   const { getCategories, categories } = useContext(productsContext);
 
   const onChange = (e) => {
     setSearch(e.target.value);
-    setSearchParams({ search: e.target.value })
+    searchParams.set('search', e.target.value);
+    setSearchParams(searchParams)
   }
 
   useEffect(() => {
     getCategories();
+    if(searchParams.get('search')) {
+      setSearch(searchParams.get('search'));
+    } else if(searchParams.get('category')){
+      setSelectedCategory(searchParams.get('category'))
+    }
   }, [])
 
   return (
@@ -33,11 +40,13 @@ const SearchComponent = () => {
         onChange={(e) => {
           searchParams.set('category', e.target.value)
           setSearchParams(searchParams)
+          setSelectedCategory(e.target.value)
         }}
+        value={selectedCategory}
       >
-        <option>Choose category...</option>
+        <option value=''>Choose category...</option>
         {categories && categories.map(item => (
-          <option value={item.id}>{item.name}</option>
+          <option value={item.name}>{item.name}</option>
         ))}
       </Form.Select>
     </Form>

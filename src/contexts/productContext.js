@@ -27,7 +27,8 @@ function reducer(state = INIT_STATE, action) {
       case 'GET_PRODUCTS':
         return {
           ...state,
-          products: action.payload
+          products: action.payload.data,
+          pages: Math.ceil(action.payload.total / 5)
         }
       case 'GET_PRODUCT':
         return {
@@ -94,14 +95,18 @@ const ProductsContextProvider = ({ children }) => {
     }
   }
 
-  const getProducts = async (search) => {
+  const getProducts = async (search, category) => {
     try {
-      const { data } = await axios(`${API}/products`, {
-        params: { q: search }
+      const res = await axios(`${API}/products?_limit=5`, { // _page=2&
+        params: { 
+          q: search,
+          ...(category ? { category } : null),
+        }
       })
+
       dispatch({
         type: "GET_PRODUCTS",
-        payload: data
+        payload: { data: res.data, total: res.headers['x-total-count']}
       })
     } catch (error) {
       console.log(error)

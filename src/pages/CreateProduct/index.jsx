@@ -19,7 +19,7 @@ const CreateProduct = () => {
     getCategories();
   },[])
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const product = {
       name,
       description,
@@ -28,7 +28,8 @@ const CreateProduct = () => {
       category: selectedCategory
     }
 
-    createProduct(product);
+    await createProduct(product);
+    
     setName('');
     setDescription('');
     setPrice('');
@@ -69,7 +70,7 @@ const CreateProduct = () => {
         >
           <option>Choose category</option>
           {categories && categories.map(item => (
-            <option value={item.name} key={item.id}>{item.name}</option>
+            <option value={item.id} key={item.id}>{item.name}</option>
           ))}
         </Form.Select>
         <Button onClick={handleSubmit} className="outline-success">Submit</Button>
